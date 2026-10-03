@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+@keyframes floatHerb {
+  0%, 100% { transform: translateY(0) rotate(-8deg); }
+  50%      { transform: translateY(-15px) rotate(8deg); }
+}
+
+@keyframes frogBop {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50%      { transform: translateY(-3px) rotate(3deg); }
+}
+
+@keyframes displayFlash {
+  0%, 100% {
+    box-shadow:
+      inset 0 4px 12px rgba(0, 0, 0, 0.5),
+      inset 0 0 30px rgba(122, 184, 122, 0.15),
+      0 3px 0 #2d5a3d,
+      0 0 0 2px rgba(212, 175, 55, 0.25);
+  }
+  50% {
+    box-shadow:
+      inset 0 4px 12px rgba(0, 0, 0, 0.5),
+      inset 0 0 30px rgba(122, 184, 122, 0.4),
+      0 3px 0 #2d5a3d,
+      0 0 25px rgba(212, 175, 55, 0.8);
+  }
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes toastOut {
+  to { opacity: 0; transform: translateY(-20px); }
+}
+
+@keyframes leafSway {
+  0%, 100% { transform: rotate(-10deg); }
+  50%      { transform: rotate(10deg); }
+}
+
+.animate-float-herb { animation: floatHerb 6s ease-in-out infinite; }
+.animate-frog-bop { animation: frogBop 2.4s ease-in-out infinite; }
+.animate-display-flash { animation: displayFlash 0.4s ease; }
+.animate-toast-in { animation: toastIn 0.3s ease; }
+.animate-leaf-sway { animation: leafSway 3s ease-in-out infinite; }
